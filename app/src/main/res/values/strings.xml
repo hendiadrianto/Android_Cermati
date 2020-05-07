@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Hendi Cermati</string>
+    <string name="user_github">User Github</string>
+    <string name="search_github_users">Search Github Users</string>
+</resources>
