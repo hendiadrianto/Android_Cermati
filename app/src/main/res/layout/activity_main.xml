@@ -35,17 +35,77 @@
         app:layout_constraintBottom_toBottomOf="@id/id_view"
         app:layout_constraintTop_toTopOf="@id/id_view" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/id_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_search">
+
+        <ImageView
+            android:id="@+id/id_back_progress"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/white_corner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/id_progress"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="@dimen/kotak_50"
+            android:layout_height="@dimen/kotak_50"
+            android:indeterminate="true"
+            app:layout_constraintBottom_toTopOf="@+id/id_text_progress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/id_back_progress" />
+
+        <TextView
+            android:id="@+id/id_text_progress"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:text="@string/loading"
+            android:textSize="@dimen/font_medium"
+            app:layout_constraintBottom_toBottomOf="@id/id_back_progress"
+            app:layout_constraintEnd_toEndOf="@id/id_back_progress"
+            app:layout_constraintStart_toStartOf="@id/id_back_progress"
+            app:layout_constraintTop_toBottomOf="@id/id_progress" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/id_kosong"
+        style="@style/text"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:background="@drawable/white_corner"
+        android:gravity="center"
+        android:padding="@dimen/margin_xLarge"
+        android:text="@string/data_kosong"
+        android:textSize="@dimen/font_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_search" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/id_rv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        tools:listitem="@layout/layout_users"
-        android:layout_marginTop="@dimen/margin_normal"
         android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_normal"
         android:layout_marginEnd="@dimen/margin_medium"
         android:layout_marginBottom="@dimen/margin_medium"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/id_search" />
+        app:layout_constraintTop_toBottomOf="@id/id_search"
+        tools:listitem="@layout/layout_users" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,6 +22,8 @@ class User_Imp (user : User_View) : User_Prest {
             override fun onResponse(call: Call<User>, response: Response<User>) {
                 if (response.isSuccessful){
                     user_view!!.Response(response.body()!!)
+                } else {
+                    user_view!!.Error("Response not sucussfull !")
                 }
             }
         })

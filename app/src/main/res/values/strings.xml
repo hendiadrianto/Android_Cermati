@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Hendi Cermati</string>
+    <string name="app_name">Hendi_Takehome</string>
     <string name="user_github">User Github</string>
     <string name="search_github_users">Search Github Users</string>
+    <string name="loading">Loading...</string>
+    <string name="data_kosong">Data Kosong</string>
 </resources>
