@@ -111,5 +111,8 @@ class MainActivity : AppCompatActivity(), User_View {
 
     override fun Error(text: String) {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+        id_loading.visibility = View.GONE
+        id_rv.visibility = View.GONE
+        id_kosong.visibility = View.VISIBLE
     }
 }
